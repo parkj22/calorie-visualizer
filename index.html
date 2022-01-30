@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300&family=Roboto+Condensed&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/321f2af193.js" crossorigin="anonymous"></script>
+    <title>Calorie Visualizer</title>
+</head>
+
+<body>
+    <header class="header__msg">
+        <h1>Calorie Visualizer</section>
+    </header>
+    <section class="section__body">
+        <section class="section__desc">
+            <span class="fa-rotate-by" style="display: inline-block; --fa-rotate-angle: 20deg;">
+                <i class="fas fa-hamburger fa-flip-horizontal"></i>
+              </span>
+            <h4>Are you eating well?</h4>
+            <p>Losing or gaining from your current bodyweight could be a great challenge. To know your ideal calorie
+                intake, you should take a look at your body's metabolism. Calorie Visualizer helps calculate your Basal
+                Metabolic Rate (BMR) and visualize in terms of food products.</p>
+        </section>
+        <section class="section__input">
+            <header class="header__input">
+                <h4>Provide following information for BMR:</h4>
+            </header>
+            <form class="form__user_input">
+                <ul>
+                    <li>
+                        <input type="text" name="user_name" id="input__user_name" placeholder="Name"
+                            class="input_field">
+                    </li>
+                    <li>
+                        <input type="radio" id="input__user_gender_male" name="user_gender" value="male">
+                        <label for="input__user_gender_male">Male</label>
+                        <input type="radio" id="input__user_gender_female" name="user_gender" value="female">
+                        <label for="input__user_gender_male">Female</label>
+                        <span class="validity"></span>
+                    </li>
+                    <li>
+                        <input type="number" id="input__user_age" name="user_age" min="0" max="100" placeholder="Age"
+                            class="input_field">
+                        <span class="validity"></span>
+                    </li>
+                    <li>
+                        <input type="number" id="input__user_height" name="user_height" min="1" max="250"
+                            placeholder="Height" class="input_field">
+                        <span class="validity"></span>
+                    </li>
+                    <li>
+                        <input type="number" id="input__user_weight" name="user_weight" min="1" max="400"
+                            placeholder="Weight" class="input_field">
+                        <span class="validity"></span>
+                    </li>
+                    <li>
+                        <button type="button" class="button" id="btn__submit">Show BMR</button>
+                    </li>
+                </ul>
+            </form>
+        </section>
+    </section>
+</body>
+
+</html>
