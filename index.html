@@ -21,11 +21,9 @@
     </header>
     <section class="section__body">
         <section class="section__desc">
-            <span class="fa-rotate-by" style="display: inline-block; --fa-rotate-angle: 20deg;">
-                <i class="fas fa-hamburger fa-flip-horizontal"></i>
-              </span>
+            <i class="fas fa-hamburger"></i>
             <h4>Are you eating well?</h4>
-            <p>Losing or gaining from your current bodyweight could be a great challenge. To know your ideal calorie
+            <p>Losing or gaining weight could be a great challenge. To know your ideal calorie
                 intake, you should take a look at your body's metabolism. Calorie Visualizer helps calculate your Basal
                 Metabolic Rate (BMR) and visualize in terms of food products.</p>
         </section>
@@ -40,9 +38,9 @@
                             class="input_field">
                     </li>
                     <li>
-                        <input type="radio" id="input__user_gender_male" name="user_gender" value="male">
+                        <input type="radio" class="radio_button" id="input__user_gender_male" name="user_gender" value="male">
                         <label for="input__user_gender_male">Male</label>
-                        <input type="radio" id="input__user_gender_female" name="user_gender" value="female">
+                        <input type="radio" class="radio_button" id="input__user_gender_female" name="user_gender" value="female">
                         <label for="input__user_gender_male">Female</label>
                         <span class="validity"></span>
                     </li>
@@ -53,12 +51,12 @@
                     </li>
                     <li>
                         <input type="number" id="input__user_height" name="user_height" min="1" max="250"
-                            placeholder="Height" class="input_field">
+                            placeholder="Height (cm)" class="input_field">
                         <span class="validity"></span>
                     </li>
                     <li>
                         <input type="number" id="input__user_weight" name="user_weight" min="1" max="400"
-                            placeholder="Weight" class="input_field">
+                            placeholder="Weight (kg)" class="input_field">
                         <span class="validity"></span>
                     </li>
                     <li>
