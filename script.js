@@ -1,11 +1,9 @@
 $(document).ready(function() {
     $("#form-user-input").validate({
         errorClass: "invalid-entry",
-        validClass: "valid-entry",
         rules: {
             user_name: {
-                required: true,
-                minlength: 1
+                required: true
             },
             user_gender: "required",
             user_age: {
@@ -32,10 +30,10 @@ $(document).ready(function() {
             user_weight: ""
         },
         highlight: function(element, errorClass, validClass) {
-            $(element).removeClass(validClass).addClass(errorClass);
+            $(element).addClass(errorClass);
         },
         success: function(element) {
-            $(element).removeClass("invalid-entry").addClass("valid-entry");
+            $(element).removeClass("invalid-entry");
         },
         invalidHandler: function(event, validator) {
             let errors = validator.numberOfInvalids();

@@ -121,12 +121,8 @@ input[type="number"]::-webkit-outer-spin-button {
     opacity: 0;
 }
 
-.valid-entry {
-    background-color: lightgreen;
-}
-
 .invalid-entry {
-    background-color: lightpink;
+    background-color: rgb(255, 214, 221);
 }
 
 .error-message {
