@@ -3,7 +3,7 @@
     --secondary-font-family: 'Roboto Condensed', sans-serif;
 }
 
-.header__msg {
+.header-msg {
     margin: auto;
     margin-top: 100px;
     text-align: center;
@@ -12,7 +12,7 @@
     max-width: 40%;
 }
 
-.section__body {
+.section-body {
     margin: auto;
     display: flex;
     width: 80vh;
@@ -23,7 +23,7 @@
     overflow: hidden;
 }
 
-.section__desc {
+.section-desc {
     padding: 12px;
     width: 50%;
     display: flex;
@@ -34,18 +34,18 @@
     overflow: hidden;
 }
 
-.section__desc i {
+.section-desc i {
     left: 4px;
     font-size: 400px;
     opacity: 0.4;
 }
 
-.section__desc h4 {
+.section-desc h4 {
     font-size: 24px;
     margin-bottom: 16px;
 }
 
-.section__input {
+.section-input {
     padding: 12px;
     width: 50%;
     height: 100%;
@@ -68,21 +68,18 @@
     background-color: darkgray;
 }
 
-.section__input form{
+.section-input form{
     height: 80%;
     text-align: center;
-}
-
-.form__user_input ul {
-    height: 100%;
     padding: 0px;
     list-style: none;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    position: relative;
 }
 
-.radio_button {
+.radio-button {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -93,11 +90,16 @@
     transition: 0.1s all linear;
 }
 
-.radio_button:checked {
+.radio-button:checked {
     border: 6px solid black;
 }
 
-.input_field {
+.input-container {
+    display: inline-block;
+    overflow: visible;
+}
+
+.input-field {
     border: 2px solid white;
     -webkit-transition: 0.5s;
     transition: 0.5s;
@@ -110,11 +112,27 @@
     outline: none;
 }
 
-.input_field:focus{
+.input-field:focus {
     border: 2px solid black;
 }
 
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
     opacity: 0;
+}
+
+.valid-entry {
+    background-color: lightgreen;
+}
+
+.invalid-entry {
+    background-color: lightpink;
+}
+
+.error-message {
+    color: red;
+    position: absolute;
+    bottom: 80px;
+    right: 8px;
+    display: none;
 }
