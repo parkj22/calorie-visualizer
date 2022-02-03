@@ -1,0 +1,132 @@
+:root {
+    --primary-font-family: 'Merriweather Sans', sans-serif;
+    --secondary-font-family: 'Roboto Condensed', sans-serif;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: var(--secondary-font-family);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    color: white;
+}
+
+header * {
+    display: inherit;
+}
+
+.logo-section {
+    font-family: var(--primary-font-family);
+}
+
+.page-logo {
+    margin: auto 12px;
+    font-size: 40px;
+}
+
+.nav-menu {
+    margin: 0px;
+}
+
+.nav-menu li {
+    padding: 24px;
+    border-right: 1px solid darkgray;
+}
+
+.nav-menu li:last-child {
+    border-right: none;
+}
+
+.nav-menu li p{
+    margin: auto;
+    display: inline-block;
+    position: relative;
+}
+
+.nav-menu li p::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transform-origin: bottom right;
+    transition: transform 0.5s ease-out;
+}
+
+.nav-menu li:last-child p::after {
+    background-color: red;
+}
+
+.nav-menu li p:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+main {
+    height: 100%;
+    margin: 24px;
+}
+
+.page-section {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    border-radius: 10px;
+}
+
+.page-section > * {
+    margin: 24px;
+    padding: 24px;
+}
+
+.graph-div {
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.graph-div:last-child {
+    margin-bottom: 0px;
+}
+
+.graph-div div {
+    position: relative;
+}
+
+.graph-tail {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    background-color: cyan;
+}
+
+.graph-head {
+    display: inline-block;
+    right: 44.672px;
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    transition: transform 2s ease-out;
+}
+
+.graph-body {
+    display: inline-block;
+    right: 68.344px;
+    width: 1px;
+    height: 40px;
+    background-color: cyan;
+    transform-origin: left;
+    transition: transform 2s ease-out;
+}
+
+.graph-label {
+    margin: auto 0px;
+    font-size: smaller;
+}
