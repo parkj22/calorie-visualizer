@@ -11,9 +11,7 @@ html, body {
 
 header {
     display: flex;
-    justify-content: space-between;
-    background-color: black;
-    color: white;
+    justify-content: space-around;
 }
 
 header * {
@@ -29,60 +27,81 @@ header * {
     font-size: 40px;
 }
 
-.nav-menu {
-    margin: 0px;
-}
-
-.nav-menu li {
-    padding: 24px;
-    border-right: 1px solid darkgray;
-}
-
-.nav-menu li:last-child {
-    border-right: none;
-}
-
-.nav-menu li p{
-    margin: auto;
-    display: inline-block;
-    position: relative;
-}
-
-.nav-menu li p::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: white;
-    transform-origin: bottom right;
-    transition: transform 0.5s ease-out;
-}
-
-.nav-menu li:last-child p::after {
-    background-color: red;
-}
-
-.nav-menu li p:hover::after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-}
-
 main {
     height: 100%;
     margin: 24px;
 }
 
+.article-div,
+.customize-div {
+    display: flex;
+}
+
 .page-section {
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
     border-radius: 10px;
+    background-color: white;
 }
 
 .page-section > * {
     margin: 24px;
     padding: 24px;
+}
+
+.article-section {
+    margin-right: 32px;
+    width: 100%;
+}
+
+.option-section {
+    width: 200px;
+}
+
+.nav-article {
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: gainsboro;
+    border-radius: 10px;
+}
+
+.nav-article div {
+    text-align: center;
+    border-bottom: 1px solid whitesmoke;
+    padding: 18px 0px;
+}
+
+.nav-article div:last-child {
+    border-bottom: none;
+}
+
+.nav-article div h3{
+    margin: auto;
+    display: inline-block;
+    position: relative;
+}
+
+.nav-article div h3::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    transform-origin: bottom right;
+    transition: transform 0.5s ease-out;
+}
+
+.nav-article div:last-child h3::after {
+    background-color: red;
+}
+
+.nav-article div h3:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }
 
 .graph-div {
@@ -104,7 +123,6 @@ main {
     width: 40px;
     height: 40px;
     border-radius: 40px;
-    background-color: cyan;
 }
 
 .graph-head {
@@ -116,12 +134,21 @@ main {
     transition: transform 2s ease-out;
 }
 
+.graph-val {
+    display: inline-block;
+    right: 40px;
+    bottom: 16px;
+    width: 82px;
+    height: 16px;
+    margin: none;
+    transition: transform 2s ease-out;
+}
+
 .graph-body {
     display: inline-block;
     right: 68.344px;
     width: 1px;
     height: 40px;
-    background-color: cyan;
     transform-origin: left;
     transition: transform 2s ease-out;
 }
@@ -129,4 +156,52 @@ main {
 .graph-label {
     margin: auto 0px;
     font-size: smaller;
+}
+
+cite {
+    display: block;
+    text-align: right;
+}
+
+.add-section {
+    width: 350px;
+    margin-right: 36px;
+}
+
+.add-header,
+.button-header {
+    border-bottom: 1px solid black;
+}
+
+.add-section div p {
+    text-align: center;
+}
+
+.button-section {
+    width: 100%;
+}
+
+button {
+    font-family: var(--secondary-font-family);
+    padding: 15px 32px;
+    border: none;
+    border-radius: 32px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 8px;
+    transform: scale(1.0);
+    transition: transform 0.1s ease-out;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+.food-name {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.add-info {
+    opacity: 0.6;
 }

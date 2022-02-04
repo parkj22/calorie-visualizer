@@ -12,8 +12,8 @@
         href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300&family=Roboto+Condensed&display=swap"
         rel="stylesheet">
     <script src="https://kit.fontawesome.com/321f2af193.js" crossorigin="anonymous"></script>
-    <script src="jquery-3.6.0.js"></script>
-    <script defer src="script-rp.js"></script>
+    <script src="js/jquery-3.6.0.js"></script>
+    <script defer src="js/display-result.js"></script>
     <title>BMR result</title>
 </head>
 
@@ -23,33 +23,29 @@
             <i class="fas fa-hamburger page-logo"></i>
             <h1>Calorie Visualizer</h1>
         </section>
-        <nav class="page-nav">
-            <ul class="nav-menu">
-                <li>
-                    <p>About BMR</p>
-                </li>
-                <li>
-                    <p>Calculation</p>
-                </li>
-                <li>
-                    <p>...</p>
-                </li>
-                <li>
-                    <p>...</p>
-                </li>
-                <li>
-                    <p>Go Back</p>
-                </li>
-            </ul>
-        </nav>
     </header>
     <main>
-        <section class="page-section article-section">
-            <article id="main-article">
-                <h1 id="article-header"></h1>
-                <p id="article-paragraph"></p>
-            </article>
-        </section>
+        <div class="article-div">
+            <section class="page-section article-section">
+                <article id="main-article">
+                    <h1 id="article-header"></h1>
+                    <p id="article-paragraph"></p>
+                </article>
+            </section>
+            <section class="page-section option-section">
+                <nav class="nav-article">
+                    <div data-id="1">
+                        <h3>About BMR</h3>
+                    </div>
+                    <div data-id="2">
+                        <h3>Calculation</h3>
+                    </div>
+                    <div data-id="0">
+                        <h3>View original</h3>
+                    </div>
+                </nav>
+            </section>
+        </div>
         <section class="page-section graph-section">
             <div>
                 <div class="graph-div">
@@ -57,22 +53,37 @@
                         <div class="graph-tail avg-male"></div>
                         <div class="graph-head avg-male"></div>
                         <div class="graph-body avg-male"></div>
+                        <div class="graph-val"></div>
                     </div>
-                    <span class="graph-label">American men in average</span>
+                    <div class="graph-label">
+                        <div>American men in average</div>
+                        <a
+                            href="https://www.livestrong.com/article/315121-how-many-calories-a-day-does-the-average-body-burn/">
+                            <cite>livestrong.com</cite>
+                        </a>
+                    </div>
                 </div>
                 <div class="graph-div">
                     <div id="avg-female-graph">
                         <div class="graph-tail avg-female"></div>
                         <div class="graph-head avg-female"></div>
                         <div class="graph-body avg-female"></div>
+                        <div class="graph-val"></div>
                     </div>
-                    <span class="graph-label">American woman in average</span>
+                    <div class="graph-label">
+                        <div>American woman in average</div>
+                        <a
+                            href="https://www.livestrong.com/article/315121-how-many-calories-a-day-does-the-average-body-burn/">
+                            <cite>livestrong.com</cite>
+                        </a>
+                    </div>
                 </div>
                 <div class="graph-div">
                     <div id="user-graph">
                         <div class="graph-tail user"></div>
                         <div class="graph-head user"></div>
                         <div class="graph-body user"></div>
+                        <div class="graph-val"></div>
                     </div>
                     <span class="graph-label">You</span>
                 </div>
@@ -81,18 +92,176 @@
                         <div class="graph-tail custom"></div>
                         <div class="graph-head custom"></div>
                         <div class="graph-body custom"></div>
+                        <div class="graph-val"></div>
                     </div>
-                    <span class="graph-label">Food product</span>
+                    <span class="graph-label">Customized</span>
                 </div>
             </div>
         </section>
-        <section class="page-section button-section">
-            <div>
-                <button></button><button></button><button></button><button></button>
-                <button></button><button></button><button></button><button></button>
-                <button></button><button></button><button></button><button></button>
-            </div>
-        </section>
+        <div class="customize-div">
+            <section class="page-section add-section">
+                <div>
+                    <h1 class="add-header">What you've added</h1>
+                </div>
+            </section>
+            <section class="page-section button-section">
+                <div>
+                    <h1 class="button-header">See in terms of...</h1>
+                    <button value="72" style="background-color: #C7372F;">
+                        <div class="food-name">
+                            Apple
+                        </div>
+                        <div class="add-info">
+                            medium
+                        </div>
+                    </button>
+                    <button value="105" style="background-color: #FFE135;">
+                        <div class="food-name">
+                            Banana
+                        </div>
+                        <div class="add-info">
+                            medium
+                        </div>
+                    </button>
+                    <button value="153" style="background-color: #F28E1C;">
+                        <div class="food-name">
+                            Beer
+                        </div>
+                        <div class="add-info">
+                            regular, 12 ounces
+                        </div>
+                    </button>
+                    <button value="66" style="background-color: #C68958;">
+                        <div class="food-name">
+                            Bread
+                        </div>
+                        <div class="add-info">
+                            one slice, wheat or white
+                        </div>
+                    </button>
+                    <button value="287" style="background-color: #FF2F00;">
+                        <div class="food-name">
+                            Chili with beans
+                        </div>
+                        <div class="add-info">
+                            canned, 1 cup
+                        </div>
+                    </button>
+                    <button value="2" style="background-color: #6F4E37;">
+                        <div class="food-name">
+                            Coffee
+                        </div>
+                        <div class="add-info">
+                            regular, brewed from grounds, black
+                        </div>
+                    </button>
+                    <button value="102" style="background-color: #FFA631;">
+                        <div class="food-name">
+                            Egg
+                        </div>
+                        <div class="add-info">
+                            large, scrambled
+                        </div>
+                    </button>
+                    <button value="193" style="background-color: #C9A387;">
+                        <div class="food-name">
+                            Granola bar
+                        </div>
+                        <div class="add-info">
+                            chewy, with raisins, 1.5 ounce
+                        </div>
+                    </button>
+                    <button value="137" style="background-color: #995F4C;">
+                        <div class="food-name">
+                            Hot dog
+                        </div>
+                        <div class="add-info">
+                            beef and pork
+                        </div>
+                    </button>
+                    <button value="145" style="background-color: #FBF4E1;">
+                        <div class="food-name">
+                            Ice cream
+                        </div>
+                        <div class="add-info">
+                            vanilla, 4 ounces
+                        </div>
+                    </button>
+                    <button value="122" style="background-color: #FDFFF5;">
+                        <div class="food-name">
+                            Milk
+                        </div>
+                        <div class="add-info">
+                            2 percent milk fat, 8 ounces
+                        </div>
+                    </button>
+                    <button value="147" style="background-color: #D0C4AB;">
+                        <div class="food-name">
+                            Oatmeal
+                        </div>
+                        <div class="add-info">
+                            plain, cooked in water without salt, 1 cup
+                        </div>
+                    </button>
+                    <button value="298" style="background-color: #D79914;">
+                        <div class="food-name">
+                            Pizza
+                        </div>
+                        <div class="add-info">
+                            pepperoni, regular crust, one slice
+                        </div>
+                    </button>
+                    <button value="161" style="background-color: #EFEAB5;">
+                        <div class="food-name">
+                            Potato
+                        </div>
+                        <div class="add-info">
+                            medium, baked, including skin
+                        </div>
+                    </button>
+                    <button value="155" style="background-color: #FDDC57;">
+                        <div class="food-name">
+                            Potato chips
+                        </div>
+                        <div class="add-info">
+                            plain, salted, 1 ounce
+                        </div>
+                    </button>
+                    <button value="123" style="background-color: #B11226;">
+                        <div class="food-name">
+                            Red wine
+                        </div>
+                        <div class="add-info">
+                            cabernet sauvignon, 5 ounces
+                        </div>
+                    </button>
+                    <button value="205" style="background-color: #F6F8ED;">
+                        <div class="food-name">
+                            Rice
+                        </div>
+                        <div class="add-info">
+                            white, long grain, cooked, 1 cup
+                        </div>
+                    </button>
+                    <button value="221" style="background-color: #FEF69E;">
+                        <div class="food-name">
+                            Spaghetti
+                        </div>
+                        <div class="add-info">
+                            cooked, enriched, without added salt, 1 cup
+                        </div>
+                    </button>
+                    <button value="100" style="background-color: #BD694C;">
+                        <div class="food-name">
+                            Tuna
+                        </div>
+                        <div class="add-info">
+                            light, canned in water, drained, 3 ounces
+                        </div>
+                    </button>
+                </div>
+            </section>
+        </div>
     </main>
 </body>
 
