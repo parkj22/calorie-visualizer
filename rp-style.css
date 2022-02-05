@@ -1,3 +1,11 @@
+/*
+rp-style.css
+
+Author: Jinyoung Park (parkj22)
+Version: February 6, 2022
+Description: Styles result-page.html file.
+*/
+
 :root {
     --primary-font-family: 'Merriweather Sans', sans-serif;
     --secondary-font-family: 'Roboto Condensed', sans-serif;
@@ -204,4 +212,29 @@ button:hover {
 
 .add-info {
     opacity: 0.6;
+}
+
+@media screen and (max-width: 768px) {
+    .article-div,
+    .customize-div {
+        flex-direction: column;
+    }
+
+    .article-section,
+    .add-section {
+        margin-bottom: 24px;
+        width: 100%;
+    }
+
+    .option-section {
+        width: 100%;
+    }
+
+    .graph-label {
+        display: none;
+    }
+
+    button {
+        width: 100%;
+    }
 }

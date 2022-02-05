@@ -1,6 +1,14 @@
+/**
+ * validate.js
+ * 
+ * @author Jinyoung Park (parkj22)
+ * @version February 6, 2022
+ * @description This module utilizes jQuery validation plugin to do form validation.
+ */
+
 $(document).ready(function() {
     $("#form-user-input").validate({
-        errorClass: "invalid-entry",
+        errorClass: "invalid-entry", // Fields that don't follow rules are set to 'invalid-entry' class
         rules: {
             user_name: {
                 required: true
@@ -22,7 +30,7 @@ $(document).ready(function() {
                 min: 0
             }
         },
-        messages: {
+        messages: { // Error messages are removes so that input fields are held in place
             user_name: "",
             user_gender: "",
             user_age: "",
@@ -35,8 +43,8 @@ $(document).ready(function() {
         success: function(element) {
             $(element).removeClass("invalid-entry");
         },
-        invalidHandler: function(event, validator) {
-            let errors = validator.numberOfInvalids();
+        invalidHandler: function(event, validator) { // Show an error message when invalid form is submitted
+            // let errors = validator.numberOfInvalids();
             $(".error-message").show();
         }
     });

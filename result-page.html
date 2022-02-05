@@ -1,3 +1,13 @@
+<!--
+    result-page.html
+
+    Author: Jinyoung Park (parkj22)
+    Version: February 6, 2022
+    Description: This HTML file is for displaying results for the form inputted from index.html. Page
+    displays and graphs the calculated BMR for further comparison/visualization. At the bottom, there
+    is a set of buttons that represent food products (e.g. Banana) that can be used to create another
+    customized graph.
+-->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,7 +23,7 @@
         rel="stylesheet">
     <script src="https://kit.fontawesome.com/321f2af193.js" crossorigin="anonymous"></script>
     <script src="js/jquery-3.6.0.js"></script>
-    <script defer src="js/display-result.js"></script>
+    <script type="module" defer src="js/display-result.js"></script>
     <title>BMR result</title>
 </head>
 
@@ -107,6 +117,7 @@
             <section class="page-section button-section">
                 <div>
                     <h1 class="button-header">See in terms of...</h1>
+                    <!-- More buttons can be inserted into this list -->
                     <button value="72" style="background-color: #C7372F;">
                         <div class="food-name">
                             Apple

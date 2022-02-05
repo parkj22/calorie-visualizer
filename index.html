@@ -1,3 +1,12 @@
+<!--
+    index.html
+
+    Author: Jinyoung Park (parkj22)
+    Version: February 6, 2022
+    Description: This HTML file is for accepting user inputs, including name, age, weight, and
+    height for BMR calculation that is done in result-page.html. For form validation, jQuery
+    validation plugin is used for simplification and customization.
+-->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -35,6 +44,7 @@
             <header class="header-input">
                 <h4>Provide following information for BMR:</h4>
             </header>
+            <!-- Gathered data in this input form is sent to result-page.html -->
             <form id="form-user-input" action="result-page.html" method="GET">
                 <div class="input-container">
                     <input type="text" name="user_name" id="input-user-name" placeholder="Name" class="input-field">
